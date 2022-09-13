@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2fff6"
+    tools:context=".Finanzas">
+
+
+    <TextView
+        android:id="@+id/income"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#f2fff6"
+        android:gravity="center"
+        android:text="@string/inc"
+        android:textColor="#72d198"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/egress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/egre"
+        android:textSize="40sp"
+        android:background="#f2fff6"
+        android:textColor="#c67d77"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/income" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#7ac695"
+        android:gravity="center"
+        android:text="@string/bal"
+        android:textColor="#f8fff5"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/egress"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnIncome"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="132dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/Plus"
+        android:textColor="#72d095"
+        android:textSize="40sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:strokeColor="#72d095"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnEgress"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="132dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/Minus"
+        android:textColor="#f98182"
+        android:textSize="40sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toEndOf="@+id/btnIncome"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:strokeColor="#f98182"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/ingFinanza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enter"
+        android:inputType="number"
+        android:textColor="#c0c0c0"
+        android:textColorHint="#c0c0c0"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnWipe"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/limpiar"
+        android:textColor="#909090"
+        android:textSize="12sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingFinanza"
+        app:strokeColor="#505050"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnShop"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/shop"
+        android:textColor="#909090"
+        android:textSize="12sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIncome"
+        app:strokeColor="#f98182"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnBill"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/bill"
+        android:textColor="#909090"
+        android:textSize="12sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toEndOf="@+id/btnShop"
+        app:layout_constraintTop_toBottomOf="@+id/btnWipe"
+        app:strokeColor="#f98182"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnHealth"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/health"
+        android:textColor="#909090"
+        android:textSize="12sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toEndOf="@+id/btnBill"
+        app:layout_constraintTop_toBottomOf="@+id/btnEgress"
+        app:strokeColor="#f98182"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnOut"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/out"
+        android:textColor="#909090"
+        android:textSize="12sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShop"
+        app:strokeColor="#f98182"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnTransport"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/transport"
+        android:textColor="#909090"
+        android:textSize="12sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toEndOf="@+id/btnOther"
+        app:layout_constraintTop_toBottomOf="@+id/btnHealth"
+        app:strokeColor="#f98182"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnOther"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="9dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/Other"
+        android:textColor="#909090"
+        android:textSize="12sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toEndOf="@+id/btnOut"
+        app:layout_constraintTop_toBottomOf="@+id/btnBill"
+        app:strokeColor="#f98182"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/distribucion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textColor="#909090"
+        android:text="@string/Porcentajes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingFinanza" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

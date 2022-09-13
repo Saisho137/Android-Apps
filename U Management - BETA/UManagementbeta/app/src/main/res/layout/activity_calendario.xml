@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calendario"
+    android:background="#4d4d4d"
+    android:orientation="vertical"
+>
+
+    <EditText
+        android:id="@+id/tEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/tituloEvento"
+        android:inputType="textPersonName"
+        android:textColorHint="#c0c0c0"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/dEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/descripcionEvento"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#c0c0c0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tEvento" />
+
+    <EditText
+        android:id="@+id/lEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/lugarEvento"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#c0c0c0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dEvento" />
+
+    <Button
+        android:id="@+id/fechaI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#3F3F3F"
+        android:text="@string/fechai"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lEvento" />
+
+    <Button
+        android:id="@+id/fechaF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3F3F3F"
+        android:text="@string/fechaf"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaI" />
+
+    <Button
+        android:id="@+id/aggCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#3F3F3F"
+        android:text="@string/aggCal"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaF" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/Image_Button"
+        app:layout_constraintStart_toEndOf="@+id/horaF"
+        app:layout_constraintTop_toBottomOf="@+id/horaI"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/Image_Button"
+        app:layout_constraintStart_toEndOf="@+id/fechaF"
+        app:layout_constraintTop_toBottomOf="@+id/fechaI"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <Button
+        android:id="@+id/horaF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3F3F3F"
+        android:text="@string/horaf"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/fechaF"
+        app:layout_constraintTop_toBottomOf="@+id/horaI" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/Image_Button"
+        app:layout_constraintStart_toEndOf="@+id/fechaI"
+        app:layout_constraintTop_toBottomOf="@+id/lEvento"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <Button
+        android:id="@+id/horaI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="47dp"
+        android:backgroundTint="#3F3F3F"
+        android:text="@string/horai"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fechaI"
+        app:layout_constraintTop_toBottomOf="@+id/lEvento" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:contentDescription="@string/Image_Button"
+        app:layout_constraintStart_toEndOf="@+id/horaI"
+        app:layout_constraintTop_toBottomOf="@+id/lEvento"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <TextView
+        android:id="@+id/f1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/formatf"
+        android:textColorHint="#c0c0c0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaI" />
+
+    <TextView
+        android:id="@+id/f3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/formatf"
+        android:textColorHint="#c0c0c0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaF" />
+
+    <TextView
+        android:id="@+id/f2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="104dp"
+        android:hint="@string/formath"
+        android:textColorHint="#c0c0c0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/f1"
+        app:layout_constraintTop_toBottomOf="@+id/horaI" />
+
+    <TextView
+        android:id="@+id/f4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="104dp"
+        android:hint="@string/formath"
+        android:textColorHint="#c0c0c0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/f1"
+        app:layout_constraintTop_toBottomOf="@+id/horaF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
